@@ -2,7 +2,7 @@
 
 ## CONFIGURE NGINX AS A LOAD BALANCER
 
-Created an EC2 VM based on Ubuntu Server 20.04 LTS and name it Nginx-lb
+Created an EC2 VM based on Ubuntu Server 20.04 LTS and named it Nginx-lb
 
 ![mamar](https://user-images.githubusercontent.com/94229949/189984548-7b9eef1e-01e6-4ee1-9ff9-bfa4dd705040.png)
 
@@ -16,11 +16,11 @@ Updated /etc/hosts file for local DNS with Web Servers’ names ( Web1 and Web2)
 
 ![mama3](https://user-images.githubusercontent.com/94229949/189985209-dd1937f1-4620-496e-ab74-00de333fe001.png)
 
-Opened the default nginx configuration file using ' sudo vi /etc/nginx/nginx.conf ' and inserted the following configuration into http section
+Opened the default nginx configuration file using ' sudo vi /etc/nginx/nginx.conf ' and inserted the following configuration into the  http section
 
 ![mama7](https://user-images.githubusercontent.com/94229949/189986177-a853f31e-541d-42ff-b98f-a8b182813751.png)
 
-Then comment out this line with an hashtag  'include /etc/nginx/sites-enabled/*; '
+Then comment out this line with an hashtag  in ' include /etc/nginx/sites-enabled/*; '
 
 Restarted Nginx and made sure the service is up and running using 'sudo systemctl restart nginx '  and 'sudo systemctl status nginx '
 
@@ -35,7 +35,7 @@ Checked if the Web Servers can be reached from the browser using new domain name
 ![mama6](https://user-images.githubusercontent.com/94229949/189989514-45603b76-43e4-443a-bd15-3981cc544855.png)
 
 
-To request for an SSL/TLS certificate ,i installed certbot . I checked if snapd service is active and running by running  ' sudo systemctl status snapd ' and then Install certbot using  ' sudo snap install --classic certbot '
+To request for an SSL/TLS certificate ,i installed certbot . I checked if snapd service is active and running using command  ' sudo systemctl status snapd ' and then Installed certbot using  ' sudo snap install --classic certbot '
 
 ![mama8](https://user-images.githubusercontent.com/94229949/189991596-7769c484-ab13-48c2-ac93-823b3a1edb3a.png)
 
@@ -60,7 +60,7 @@ configured a cronjob to run the command twice a day. Edited the crontab file wit
 ![mama12](https://user-images.githubusercontent.com/94229949/189996634-7f04250b-91b6-42f3-ae9b-52b0b511a6c7.png)
 
 
- Nginx Load Balancing Web Solution with secured HTTPS connection with periodically updated SSL/TLS certificates.
+ I successfully implemented Nginx Load Balancing Web Solution with secured HTTPS connection with periodically updated SSL/TLS certificates.
 
 
 
